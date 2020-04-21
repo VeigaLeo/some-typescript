@@ -2,7 +2,7 @@
 
 ---
 
-This is a simple project just to learn some typescript features, such as interfaces, classes.
+This is a simple project just to learn some typescript features such as interfaces and classes.
 
 ### Description
 
