@@ -1,22 +1,15 @@
 "use strict";
-var Sorter = /** @class */ (function () {
-    function Sorter(collection) {
-        this.collection = collection;
-    }
-    Sorter.prototype.sort = function () {
-        var length = this.collection.length;
-        for (var i = 0; i < length; i++) {
-            for (var j = 0; j < length - i - 1; j++) {
-                if (this.collection[j] > this.collection[j + 1]) {
-                    var leftHand = this.collection[j];
-                    this.collection[j] = this.collection[j + 1];
-                    this.collection[j + 1] = leftHand;
-                }
-            }
-        }
-    };
-    return Sorter;
-}());
-var sort = new Sorter([5, 6, 1, 18, 54, 24]);
+Object.defineProperty(exports, "__esModule", { value: true });
+var Sorter_1 = require("./Sorter");
+var NumbersCollection_1 = require("./NumbersCollection");
+var CharactersCollection_1 = require("./CharactersCollection");
+var LinkedList_1 = require("./LinkedList");
+//sort array of numbers
+var numbersCollection = new NumbersCollection_1.NumbersCollection([54, 69, 21, 2, 3, -5, 0, 1]);
+//sort a random string
+var charactersCollection = new CharactersCollection_1.CharactersCollection("asdcefgegxaxAAXXXdwfwefgwe");
+//sort a linked list
+var linkedList = new LinkedList_1.LinkedList();
+var sort = new Sorter_1.Sorter(charactersCollection);
 sort.sort();
 console.log(sort.collection);
